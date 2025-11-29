@@ -6,9 +6,9 @@ export function CTASection() {
         <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
           Join thousands of writers already using WriteFlow to create better content faster.
         </p>
-        <button className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition">
+        <a href="/login" className="inline-block px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition">
           Start Your Free Trial
-        </button>
+        </a>
       </div>
     </section>
   )

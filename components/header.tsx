@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,12 +11,12 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">WF</span>
             </div>
             <span className="font-bold text-lg text-foreground">WriteFlow</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -32,9 +33,9 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <button className="px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition">
+            <Link href="/login" className="px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition">
               Get Started
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -63,9 +64,9 @@ export function Header() {
             <a href="#pricing" className="block px-4 py-2 text-muted-foreground hover:text-foreground">
               Pricing
             </a>
-            <button className="w-full px-4 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition">
+            <Link href="/login" className="block text-center w-full px-4 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition">
               Get Started
-            </button>
+            </Link>
           </div>
         )}
       </div>
